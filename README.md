@@ -55,7 +55,7 @@ $ yarn run start
 # run tests
 $ yarn run db:test:up
 $ yarn run prisma:test:deploy
-$ yarn run test:e2ew
+$ yarn run test:e2e
 ```
 
 ```bash
