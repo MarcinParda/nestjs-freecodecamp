@@ -45,18 +45,20 @@ $ yarn install
 #### Running the app
 
 ```bash
-# development
+# development (localhost:3333)
 $ yarn run db:dev:up
 $ yarn run prisma:dev:deploy
 $ yarn run start
- 
- API WILL RUN on localhost:3333
+``` 
 
+```bash
 # run tests
 $ yarn run db:test:up
 $ yarn run prisma:test:deploy
 $ yarn run test:e2ew
+```
 
+```bash
 # prisma studio
 $ npx prisma studio
 ```
