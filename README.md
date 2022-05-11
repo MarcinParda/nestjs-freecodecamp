@@ -39,23 +39,21 @@ List the ready features here:
 ## Setup
 
 ```bash
-$ yarn install
+$ yarn
 ```
 
 #### Running the app
 
 ```bash
 # development (localhost:3333)
-$ yarn run db:dev:up
-$ yarn run prisma:dev:deploy
-$ yarn run start
+$ yarn db:dev:restart
+$ yarn start
 ``` 
 
 ```bash
 # run tests
-$ yarn run db:test:up
-$ yarn run prisma:test:deploy
-$ yarn run test:e2e
+$ yarn db:test:restart
+$ yarn test:e2e
 ```
 
 ```bash
