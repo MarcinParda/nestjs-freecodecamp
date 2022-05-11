@@ -11,17 +11,15 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  email     String @unique
+  id        Int        @id @default(autoincrement())
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  email     String     @unique
   hash      String
-
   firstName String?
   lastName  String?
-
   bookmarks Bookmark[]
-  
+
   @@map("users")
 }
 
@@ -30,11 +28,10 @@ model Bookmark {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   title       String
-  description String
+  description String?
   link        String
+  userId      Int
+  user        User     @relation(fields: [userId], references: [id])
 
-  userId Int
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
- 
   @@map("bookmarks")
 }
